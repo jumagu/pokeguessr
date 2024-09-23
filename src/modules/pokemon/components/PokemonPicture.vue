@@ -17,8 +17,8 @@ const pokemonImage = computed(
 
 <template>
   <section>
-    <img v-if="showPokemon" class="h-[200px]" :src="pokemonImage" alt="Pokemon Image" />
-    <img v-else class="fade-in brightness-0 h-[200px]" :src="pokemonImage" alt="Pokemon Image" />
+    <img v-if="showPokemon" class="fade-in h-[200px]" :src="pokemonImage" alt="Pokemon Image" />
+    <img v-else class="brightness-0 h-[200px]" :src="pokemonImage" alt="Pokemon Image" />
   </section>
 </template>
 
