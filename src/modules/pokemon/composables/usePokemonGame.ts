@@ -22,7 +22,7 @@ export const usePokemonGame = () => {
 
     const pokemons: Pokemon[] = res.data.results.map((pokemon) => {
       const urlParts = pokemon.url.split('/');
-      const id = Number(urlParts.at(-2) ?? 0);
+      const id = Number(urlParts[urlParts.length - 2] ?? 0);
 
       return {
         id,
@@ -37,8 +37,6 @@ export const usePokemonGame = () => {
     gameStatus.value = GameStatus.Playing;
     options.value = pokemons.value.slice(0, quantity);
     pokemons.value = pokemons.value.slice(quantity);
-
-    console.log(pokemons.value);
   };
 
   const checkAnswer = (id: number) => {
