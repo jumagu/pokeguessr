@@ -20,6 +20,7 @@ const { options, rndPokemon, isLoading, gameStatus, checkAnswer, getNextRound } 
         v-if="gameStatus !== GameStatus.Playing"
         class="w-40 p-3 my-5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors"
         @click="getNextRound()"
+        data-test-id="new-game-btn"
       >
         Play Again
       </button>
